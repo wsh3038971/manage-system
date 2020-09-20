@@ -8,7 +8,7 @@
       @close="handleClose(tag)"
     >{{tag.label}}</el-tag>
   </div>
-</template>
+</template>  
 
 <script>
 import {mapState, mapMutations} from 'vuex'
