@@ -6,6 +6,8 @@
       :closable="tag.label === '首页' ? false : true"
       :disable-transitions="false"
       @close="handleClose(tag)"
+      @click="changeMenu(tag)"
+      :effect="$route.name == tag.name ? 'dark' : 'plain'"
     >{{tag.label}}</el-tag>
   </div>
 </template>  
@@ -30,12 +32,20 @@ export default {
     }),
     handleClose(tag) {
         this.close(tag)
+    },
+    changeMenu(item) {
+      console.log(item)
+      this.$router.push({name: item.name})
+      this.$store.commit('selectMenu', item)
     }
   },
 };
 </script>
 
 <style lang="scss" scoped>
+/deep/ .el-tag {
+  cursor: pointer;
+}
 .tabs {
     padding: 20px;
     .el-tag {

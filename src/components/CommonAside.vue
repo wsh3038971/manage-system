@@ -2,7 +2,7 @@
       <el-menu
       default-active="2"
       class="el-menu-vertical-demo"
-      background-color="#33aef0"
+      background-color="#545c64"
       text-color="#fff"
       active-text-color="#ffd04b">
       <el-submenu index="1" v-for="(item, index) in children" :key="index" @click="clickMenu(item)">
@@ -41,33 +41,33 @@ export default {
                     path: '/',
                     name: 'home',
                     label: '首页',
-                    icon: 'home'
+                    icon: 's-home'
                 },
                 {
-                    path: '/video',
-                    name: 'video',
+                    path: '/videoManage',
+                    name: 'videoManage',
                     label: '视频管理',
                     icon: 'video-play'
                 },
                 {
-                    path: '/user',
-                    name: 'user',
+                    path: '/userManage',
+                    name: 'userManage',
                     label: '用户管理',
                     icon: 'user'
                 },
                 {
                     label: '其他',
-                    name: 'user',
+                    name: 'other',
                     icon: 'user',
                     children: [
                       {
-                        path: '/',
+                        path: '/page1',
                         name: 'page1',
                         label: '1',
                         icon: 'video-play'
                       },
                       {
-                        path: '/',
+                        path: '/page2',
                         name: 'page2',
                         label: '2',
                         icon: 'video-play'
@@ -79,6 +79,7 @@ export default {
     },
     methods: {
       clickMenu (item) {
+        this.$router.push({name: item.name})
         this.$store.commit('selectMenu', item)
       }
     }
