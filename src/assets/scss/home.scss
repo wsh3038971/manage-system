@@ -1,0 +1,77 @@
+.el-card{
+    margin-bottom: 20px;
+}
+.home {
+    .userMes {
+        height: 100%;
+        .user {
+            height: 144px;
+            display: flex;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+          .userInfo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 40px;
+          }  
+          .userRank {
+              .userName {
+                font-size: 30px;
+                font-weight: 700;
+                margin-bottom: 15px;
+              }
+              .userRole {
+
+              }
+          }
+        }
+        .loginMes {
+            flex: 1;
+            height: 106px;
+            display: flex;
+            color: #666;
+            // margin-top: 1px;
+            .loginTime {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                margin-right: 40px;
+            }
+            .loginAddress {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+
+            }
+        }
+    }
+    .modules {
+        .modules_item {
+            display: flex;
+            align-items: center;
+            .left {
+                width: 70px;
+                height: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-right: 20px;
+                .icon {
+                    font-size: 40px;
+                    color: #fff;
+                }
+            }   
+            .right {
+                .num {
+                    font-size: 28px;
+                    font-weight: 700;
+                }
+                .txt {
+                    color: #999;
+                }
+            }
+        }
+    }   
+}

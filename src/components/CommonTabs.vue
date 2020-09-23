@@ -47,7 +47,7 @@ export default {
   cursor: pointer;
 }
 .tabs {
-    padding: 20px;
+    padding: 10px 20px;
     .el-tag {
         margin-right: 10px;
     }
