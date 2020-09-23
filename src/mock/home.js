@@ -29,5 +29,15 @@ export default {
                 ]
             }
         }
+    },
+    datas: () => {
+        return {
+            code: 2000,
+            data: {
+                content: [
+                    123,456
+                ]
+            }
+        }
     }
 }

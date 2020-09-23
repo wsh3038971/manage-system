@@ -106,7 +106,7 @@ export default {
     }
   },
   created() {
-    this.$http.get("/home/getData").then((response) => {
+    this.$http.get("/home/getDatas").then((response) => {
       console.log(response);
     });
   },
