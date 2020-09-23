@@ -1,5 +1,6 @@
 export default {
     state: {
+        isCollapse: false,
         menu: [],
         currentMenu: {},
         tabsList: [
@@ -12,6 +13,9 @@ export default {
         ]
     },
     mutations: {
+        collapseMenu (state, val) {
+            state.isCollapse = !state.isCollapse
+        },
         selectMenu (state, val) {
             if (val.name !== 'home') {
                 state.currentMenu = val

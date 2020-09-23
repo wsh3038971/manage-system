@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="l-content">
-      <el-button class="btn" type="primary" icon="el-icon-menu" size="mini"></el-button>
+      <el-button class="btn" type="primary" icon="el-icon-menu" size="mini" @click="isCollage"></el-button>
       <el-breadcrumb separator="/">
         <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
         <el-breadcrumb-item :to="current.path" v-if="current">
@@ -34,6 +34,11 @@ export default {
   data () {
     return {
       userImage: require('../assets/image/1.gif')
+    }
+  },
+  methods: {
+    isCollage() {
+      this.$store.commit('collapseMenu')
     }
   }
 };
